@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: #1a1b33;
+    color: white;
+}
+.mainDiv{   
+    height: auto;
+    width: 100%;
+}
+/* ======= start logo section */
+.logoDiv{
+    margin: 15px 30px;
+    border: 1px dashed white;
+    border-radius: 5px;
+    width: 170px;
+    padding: 5px 10px;
+}
+.logo{
+    color:red;
+    float: left;
+    margin: 7px 3px 0 0;    
+}
+.appDiv{
+    margin: 0 0 0 15px;
+    text-transform: uppercase;
+    color: #5ce5c1;
+}
+.xrole{
+    font-size: 40px;   
+    display: block;
+    font-family: 'Exo', sans-serif;
+}
+.currencyConverter{
+    font-size: 14px;
+    margin: 0 0 0 -17px;
+}
+/* ============ end  logo section */
+/* ============ start content div */
+.contentDiv{
+    margin: 70px 30% 70px 40%;
+}
+.formDiv{
+
+}
+/*============ end content div*/
