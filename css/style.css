@@ -100,5 +100,8 @@ select{
     color: #5ce5c1;
     font-size: 30px;
 }
-
 /*============ end content div*/
+footer{
+    margin: 130px 0 0 600px;
+    font-size: 12px;
+}
