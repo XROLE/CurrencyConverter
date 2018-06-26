@@ -57,23 +57,31 @@ body{
     font-size: 24px;
 }
 form{
-    margin: 25px 0 0 0;
+    margin: 10px 0 0 0;
     width: 100%;
+    height: auto;
 }
 form input{
     padding: 5px 10px;
     font-size: 15px;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
+    border: none;    
     color: white;
 }
+.formGroup input{
+    border-bottom: 1px solid white;
+}
 .fromToDiv{
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
 }
 select{
     padding: 5px 10px;
     margin: 0 10px 0 0;
+}
+.arrowDiv{
+    display: inline;
+    margin: 20px;
+    font-size: 50px;
 }
 #convert{
     text-transform: uppercase;
@@ -82,7 +90,13 @@ select{
     border-radius:5px;
     border: none;
     background-color: #5ce5c1;    
+    margin: 20px 0 0 0;
+    font-weight: bold; 
+}
+#displayResult{
     margin: 20px 0 0 0; 
+    color: #5ce5c1;
+    font-size: 30px;
 }
 
 /*============ end content div*/
