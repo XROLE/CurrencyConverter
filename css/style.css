@@ -30,7 +30,9 @@ body{
 }
 .xrole{
     font-size: 40px;   
-    display: block;
+    display: block;    
+}
+.xrole_font{
     font-family: 'Exo', sans-serif;
 }
 .currencyConverter{
@@ -40,9 +42,47 @@ body{
 /* ============ end  logo section */
 /* ============ start content div */
 .contentDiv{
-    margin: 70px 30% 70px 40%;
+    margin: 40px 30% 70px 30%;
+    text-align: center;
 }
 .formDiv{
 
 }
+.formDiv h1{
+   font-size: 45px;
+   text-transform: capitalize;
+   font-family: 'Poiret One', cursive;
+}
+.formDiv p{
+    font-size: 24px;
+}
+form{
+    margin: 25px 0 0 0;
+    width: 100%;
+}
+form input{
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.fromToDiv{
+    margin: 30px 0 0 0;
+}
+select{
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+}
+#convert{
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius:5px;
+    border: none;
+    background-color: #5ce5c1;    
+    margin: 20px 0 0 0; 
+}
+
 /*============ end content div*/

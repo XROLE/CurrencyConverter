@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Exo|Poiret+One" rel="stylesheet">
         <title>currency converter</title>
     </head>
     <body>
@@ -13,29 +14,28 @@
             <div class="logoDiv">
                 <i class="fa fa-dollar logo" style="font-size:34px;"></i>
                 <div class="appDiv">
-                    <p class="appMotor"><span class="xrole">xrole</span> <span class="currencyConverter">currency converter</span> </p>
+                    <p class="appMotor"><span class="xrole xrole_font">xrole</span> <span class="currencyConverter">currency converter</span> </p>
                 </div>
             </div>
             <div class="contentDiv">
                 <div class="formDiv"> 
-                    <h1>currency converter</h1>
                     <p>ALC 3.0 Project</p>
+                    <h1>currency converter</h1>
                     <form action="">
                         <div class="formGroup">
-                            <input type="text" placeholder="AMOUNT">
+                            <input type="number" placeholder="AMOUNT">
                         </div>
-                        <div class="formGroup">
+                        <div class="formGroup fromToDiv">
                             <label for="">FROM</label>
                             <select name="" id="">
                                 <option value="">Naira</option>
                             </select>
-                        </div>
-                        <div class="formGroup">
                             <label for="">TO</label>
                             <select name="" id="">
                                 <option value="">Naira</option>
                             </select>
                         </div>
+                        <button id="convert">convert</button>
                     </form>
                 </div>
             </div>
