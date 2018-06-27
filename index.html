@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Exo|Poiret+One" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <script type="text/javascript" src="js/index.js"></script>
         <title>currency converter</title>
     </head>
     <body>
@@ -23,23 +25,26 @@
                     <h1>currency converter</h1>
                     <form action="">
                         <div class="formGroup fromToDiv">
-                            <input type="number" placeholder="AMOUNT">
-                            <select name="" id="">
-                                <option value="">FROM</option>
+                            <input type="number" placeholder="AMOUNT" id="Amount">
+                            <select name="" id="from">
+                                <option value="FROM">FROM</option>
                             </select>
                             <div class="arrowDiv">
                                <span>&rarr;	</span> 
                             </div> 
-                            <select name="" id="">
-                                <option value="">TO</option>
+                            <select name="" id="to">
+                                <option value="TO">TO</option>
                             </select>
                         </div>
-                        <button id="convert">convert</button><br>
+                        <button id="convert">convert </button><br>
                         <input type="number" id="displayResult">
                     </form>
                 </div>
             </div>
             <footer><p> &copy; xrole, @ALC</p></footer>
         </div>
+
+
+        
     </body>
 </html>
