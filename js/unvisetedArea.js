@@ -1,1 +1,1 @@
-window.onload = () => alert('no service available yet');https://github.com/XROLE/Frontend-test.git
+window.onload = () => alert('no service available yet');
