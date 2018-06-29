@@ -46,7 +46,7 @@ body{
     text-align: center;
 }
 .formDiv{
-
+    width: 100%;
 }
 .formDiv h1{
    font-size: 45px;
@@ -72,19 +72,21 @@ form input{
     border-bottom: 1px solid white;
 }
 .fromToDiv{
+    width: 100%;
     margin: 20px 0 0 0;
 }
 .fromToDiv input{
-    margin: 0 20px 0 0;
+    margin: 0 20px 10PX 0;
 }
 select{
     padding: 5px 10px;
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 0;
+    width: 200px;
 }
 .arrowDiv{
     display: inline;
-    margin: 20px;
-    font-size: 50px;
+    margin: 5px;
+    font-size: 20px;
 }
 #convert{
     text-transform: uppercase;
