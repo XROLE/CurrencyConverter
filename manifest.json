@@ -3,9 +3,9 @@
   "name": "currency converter",
   "icons": [
     {
-      "src": "./images/favicon.PNG",
+      "src": "./images/manifesticon.png",
       "type": "image/png",
-      "sizes": "181x76"
+      "sizes": "192x192"
     }    
   ],
   "start_url": "./index.html",
