@@ -6,6 +6,11 @@
       "src": "./images/manifesticon.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "./images/favicon.PNG",
+      "type": "image/png",
+      "sizes": "192x512"
     }    
   ],
   "start_url": "./index.html",
