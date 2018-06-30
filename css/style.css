@@ -53,6 +53,9 @@ body{
    text-transform: capitalize;
    font-family: 'Poiret One', cursive;
 }
+.hidelabel{
+    display: none;
+}
 .formDiv p{
     font-size: 24px;
 }
