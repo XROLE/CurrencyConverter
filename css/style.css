@@ -8,7 +8,7 @@ body{
 }
 .mainDiv{   
     height: auto;
-    width: 100%;
+    /* width: 100%; */
 }
 /* ======= start logo section */
 .logoDiv{
@@ -45,9 +45,9 @@ body{
     margin: 40px 30% 70px 30%;
     text-align: center;
 }
-.formDiv{
+/* .formDiv{
     width: 100%;
-}
+} */
 .formDiv h1{
    font-size: 45px;
    text-transform: capitalize;
@@ -58,7 +58,7 @@ body{
 }
 form{
     margin: 10px 0 0 0;
-    width: 100%;
+    /* width: 100%; */
     height: auto;
 }
 form input{
@@ -72,7 +72,7 @@ form input{
     border-bottom: 1px solid white;
 }
 .fromToDiv{
-    width: 100%;
+    /* width: 100%; */
     margin: 20px 0 0 0;
 }
 .fromToDiv input{
@@ -108,8 +108,42 @@ footer{
     font-size: 12px;
 }
 /* //============================= phone =================== */
-/* @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     body{
-        background-color: white !important;
+        /* background-color: white !important; */
     }
-} */
+    .logoDiv{
+        margin: 35px 0 15px 115px;
+        border: none;
+        width: 170px;
+        padding: 5px 10px;
+    }
+    .xrole{
+        font-size: 30px;   
+        display: block;    
+    }
+    .currencyConverter{
+        font-size: 12px;
+        margin: 0 0 0 -17px;
+    }
+   
+    .formDiv h1{
+        font-size: 25px;
+        text-transform: capitalize;
+        font-family: 'Poiret One', cursive;
+     }
+    .contentDiv{
+    margin: 70px 0;
+    text-align: center;
+    }
+   
+    select{
+        padding: 5px 0;
+        margin: 0 5px 0 0;
+        width: 100px;
+    }
+    footer{
+        margin: 200px 0 0 150px;
+        font-size: 12px;
+    }
+}
