@@ -1,3 +1,4 @@
+
 "use strict";
  
 window.onload = () => { 
@@ -18,8 +19,9 @@ window.onload = () => {
   let from = document.getElementById('from');
   let to = document.getElementById('to');
   let displayResult = document.getElementById('displayResult');
- 
+     
   amount.focus(); //keeping the cursor in the amount field on each reload
+ 
     
   // making fetch request to the currency api server
   fetch('https://free.currencyconverterapi.com/api/v5/currencies')
@@ -68,10 +70,32 @@ window.onload = () => {
           return response.json();
       }).then(rated => {
         let val = rated[query];
+            console.log(val);
         if(val){                                            //checking to see if the query was succesfle
           let total = val * amount;                         // computing the total
           let newTotal = Math.round(total * 100) / 100;     // round the converted amount to a whole number
           displayResult.value = newTotal;
+
+          // create indexDB and store rate
+          function storeRate(){ 
+            // const fromCurrency = encodeURIComponent(fromCurrency1);
+            // const toCurrency = encodeURIComponent(toCurrency1);   
+            // const query = `${fromCurrency}_${toCurrency}`;
+
+            let open = indexedDB.open("currencyDB", 1);
+            // Creating the schema
+            open.onupgradeneeded = function() {
+              let db = open.result;
+              let store = db.createObjectStore("rateStore", {keyPath: "id"}); 
+              //adding data
+              store.put({id:  `${query}`, name: {'rate': `${val}`}});
+            }  
+            // Close the db when the transaction is done
+             tx.oncomplete = function() {
+              db.close();
+            };
+          };
+          storeRate();
           console.log(newTotal);                            //log the converted amount to the console
         } else{
           console.log('sommthing bad happened');
@@ -79,6 +103,7 @@ window.onload = () => {
     })    
   }
 
+  
   //attching conversion functionality to button     
   conversionButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -87,7 +112,47 @@ window.onload = () => {
     const enteredAmount = amount.value;
 
     convertCurrency(enteredAmount,convertFrom, convertTo);
-        
+           
   });
    
-}
+  }
+//working with indexDB
+
+// let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+// let open = indexedDB.open("currencyDB", 1);
+
+// // Creating the schema
+// open.onupgradeneeded = function() {
+//     let db = open.result;
+//     let store = db.createObjectStore("rateStore", {keyPath: "id"});
+//     let index = store.createIndex("NameIndex", ["name.last", "name.first"]);
+// };
+
+// open.onsuccess = function() {
+//     // Start a new transaction
+//     let db = open.result;
+//     let tx = db.transaction("rateStore", "readwrite");
+//     let store = tx.objectStore("rateStore");
+//     let index = store.index("NameIndex");
+
+//     // Add some data
+//     store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
+//     store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
+    
+//     // Query the data
+//     let getJohn = store.get(12345);
+//     let getBob = index.get(["Smith", "Bob"]);
+
+//     getJohn.onsuccess = function() {
+//         console.log(getJohn.result.name.first);  // => "John"
+//     };
+//     getBob.onsuccess = function() {
+//         console.log(getBob.result.name.first);   // => "Bob"
+//     };
+
+//     // Close the db when the transaction is done
+//     tx.oncomplete = function() {
+//         db.close();
+//     };
+// }
+
