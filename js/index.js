@@ -90,10 +90,10 @@ window.onload = () => {
               //adding data
               store.put({id:  `${query}`, name: {'rate': `${val}`}});
             }  
-            // Close the db when the transaction is done
-             tx.oncomplete = function() {
-              db.close();
-            };
+            // // Close the db when the transaction is done
+            //  tx.oncomplete = function() {
+            //   db.close();
+            // };
           };
           storeRate();
           console.log(newTotal);                            //log the converted amount to the console
@@ -116,43 +116,4 @@ window.onload = () => {
   });
    
   }
-//working with indexDB
-
-// let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-// let open = indexedDB.open("currencyDB", 1);
-
-// // Creating the schema
-// open.onupgradeneeded = function() {
-//     let db = open.result;
-//     let store = db.createObjectStore("rateStore", {keyPath: "id"});
-//     let index = store.createIndex("NameIndex", ["name.last", "name.first"]);
-// };
-
-// open.onsuccess = function() {
-//     // Start a new transaction
-//     let db = open.result;
-//     let tx = db.transaction("rateStore", "readwrite");
-//     let store = tx.objectStore("rateStore");
-//     let index = store.index("NameIndex");
-
-//     // Add some data
-//     store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
-//     store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
-    
-//     // Query the data
-//     let getJohn = store.get(12345);
-//     let getBob = index.get(["Smith", "Bob"]);
-
-//     getJohn.onsuccess = function() {
-//         console.log(getJohn.result.name.first);  // => "John"
-//     };
-//     getBob.onsuccess = function() {
-//         console.log(getBob.result.name.first);   // => "Bob"
-//     };
-
-//     // Close the db when the transaction is done
-//     tx.oncomplete = function() {
-//         db.close();
-//     };
-// }
 
